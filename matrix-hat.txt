@@ -1,0 +1,80 @@
+// -=- COPY PASTE THE CONTENTS TO  -=-
+// declaring frames
+var matrixhat1_1 = ascii
+┌----┐
+|0000|
+======
+asciiend
+
+var matrixhat1_2 = ascii
+┌----┐
+|1000|
+======
+asciiend
+
+var matrixhat1_3 = ascii
+┌----┐
+|0100|
+======
+asciiend
+
+var matrixhat1_4 = ascii
+┌----┐
+|0010|
+======
+asciiend
+
+var matrixhat1_5 = ascii
+┌----┐
+|0001|
+======
+asciiend
+
+var matrixhat1_6 = ascii
+┌----┐
+|1010|
+======
+asciiend
+
+var matrixhat1_7 = ascii
+┌----┐
+|0101|
+======
+asciiend
+
+var matrixhat1_8 = ascii
+┌----┐
+|1111|
+======
+asciiend
+
+var timer
+// if interval increases the animation will slower
+var interval = 10
+var total_sprites = 8
+var hatcolor = #green
+var total_time = total_sprites * interval
+
+// Main Function
+func MATRIXHAT()
+  timer = time
+  ?timer % total_time < interval
+    >h-2,-3,@hatcolor@,@matrixhat1_1@
+  :?timer % total_time < interval * 2
+    >h-2,-3,@hatcolor@,@matrixhat1_2@
+  :?timer % total_time < interval * 3
+    >h-2,-3,@hatcolor@,@matrixhat1_3@
+  :?timer % total_time < interval * 4
+    >h-2,-3,@hatcolor@,@matrixhat1_4@
+  :?timer % total_time < interval * 5
+    >h-2,-3,@hatcolor@,@matrixhat1_5@
+  :?timer % total_time < interval * 6
+    >h-2,-3,@hatcolor@,@matrixhat1_6@
+  :?timer % total_time < interval * 7
+    >h-2,-3,@hatcolor@,@matrixhat1_7@
+  :?timer % total_time < interval * 8
+    >h-2,-3,@hatcolor@,@matrixhat1_8@
+
+
+// Activate
+MATRIXHAT()
